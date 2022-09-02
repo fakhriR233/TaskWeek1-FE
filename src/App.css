@@ -1,38 +1,81 @@
-.App {
+/* THIS IS STYLE FOR MODAL */
+
+.modal-body {
+  background-color: #1f1f1f;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.modal-container {
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.btn-modal-register {
+  color: red;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.modal-title {
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.modal-account {
+  color: #b1b1b1;
+  text-align: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.modal-register-group {
+  background-color: grey;
+}
+
+.modal-register-group::placeholder {
+  color: white;
+}
+
+.modal-account-here {
+  color: white;
+  cursor: pointer;
+}
+
+.btn-modal-login {
+  color: white;
+}
+
+/* END OF MODAL STYLE */
+
+.App {
+  width: 700;
+  padding: 30;
+  display: block;
+}
+
+/* ini lu cek lagi dah jumbotron */
+.jumbotron {
+  /* background-image: url("../src/Images/1484260.jpg"); */
+  background-size: cover;
+  height: 450px;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  /* background-attachment: fixed; */
+  /* background: linear-gradient(top, rgba(255,255,255,0.5), rgba(0,0,0,0.3)); */
+  /* background: linear-gradient(to bottom, rgb(0,0,0) 30%, rgb(255,255,255) 100%); */
+}
+
+.jumbotron .container {
+  color: #fff;
+}
+
+.jumbotron::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+/* this is top navbar */
+
+.top-navbar {
+  font-family: sans-serif;
 }
