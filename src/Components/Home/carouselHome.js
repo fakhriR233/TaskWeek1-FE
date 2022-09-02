@@ -16,7 +16,7 @@ function carouselHome() {
             Movies / TV Series
           </button>
         </div>
-        <a className="btn btn-danger btn-lg mb-3" href="#" role="button">
+        <a className="btn btn-danger btn-lg mb-3" href="/" role="button">
           Learn more
         </a>
       </div>

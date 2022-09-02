@@ -1,10 +1,11 @@
 import React from "react";
 import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
-import Form from "react-bootstrap/Form";
+// import Form from "react-bootstrap/Form";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import NavDropdown from "react-bootstrap/NavDropdown";
+import { Link } from "react-router-dom";
+// import NavDropdown from "react-bootstrap/NavDropdown";
 
 function TopNavbar() {
   return (
@@ -17,13 +18,13 @@ function TopNavbar() {
             style={{ maxHeight: "100px" }}
             navbarScroll
           >
-            <Nav.Link href="#action1" className="active top-navbar">
+            <Nav.Link as={Link} to="/" className="active top-navbar">
               Home
             </Nav.Link>
-            <Nav.Link href="#action2" className="top-navbar">
+            <Nav.Link as={Link} to="/tvshows" className="top-navbar">
               TV Shows
             </Nav.Link>
-            <Nav.Link href="#action2" className="top-navbar">
+            <Nav.Link as={Link} to="/movies" className="top-navbar">
               Movies
             </Nav.Link>
           </Nav>
