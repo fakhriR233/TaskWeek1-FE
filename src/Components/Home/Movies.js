@@ -10,10 +10,10 @@ function Movies() {
           <h5 className="my-4 text-white">Movies</h5>
           <Col sm={6} md={3} className="my-3">
             <a href="#" style={{ textDecoration: "none", color: "black" }}>
-              <Card>
-                <Card.Img src={cardImages} className="mb-3" />
+              <Card className="home-movies-card">
+                <Card.Img src={cardImages} className="mb-1" />
                 <Card.Body>
-                  <h3>Title Movies</h3>
+                  <h4>Title Movies</h4>
                   <p className="text-muted">2019</p>
                 </Card.Body>
               </Card>

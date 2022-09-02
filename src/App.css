@@ -79,3 +79,10 @@
 .top-navbar {
   font-family: sans-serif;
 }
+
+/* this is homescreen */
+
+.home-movies-card {
+  background-color: black;
+  color: white;
+}
