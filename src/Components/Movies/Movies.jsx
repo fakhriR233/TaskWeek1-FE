@@ -1,12 +1,16 @@
 import React from 'react'
 import TopNavbar from '../Utility/TopNavbar'
+import CardMovies from './CardMovies'
+import CarouselMovies from './CarouselMovies'
+
 
 function Movies() {
   return (
-    <div>
+    <>
       <TopNavbar/>
-      <h1>Movies</h1>
-    </div>
+      <CarouselMovies/>
+      <CardMovies/>
+    </>
   )
 }
 
