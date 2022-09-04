@@ -6,13 +6,20 @@ import TopNavbarAdmin from "./Components/Utility/TopNavAdmin";
 import AdminTransaction from "./Pages/AdminTransaction";
 import TopNavbar from "./Components/Utility/TopNavbar";
 import AdminAddMovies from "./Pages/AdminAddMovies";
+import HomeScreen from "./Components/Home/HomeScreen";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
-    <div className="">
-      <TopNavbarAdmin />
-      <AdminAddMovies />
-    </div>
+    <>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" exact element={<HomeScreen />} />
+          <Route path="/tvshows" exact element={<HomeScreen />} />
+          <Route path="/movies" exact element={<HomeScreen />} />
+        </Routes>
+      </BrowserRouter>
+    </>
   );
 }
 

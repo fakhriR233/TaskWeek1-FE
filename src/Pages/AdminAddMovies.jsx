@@ -13,12 +13,15 @@ const AdminAddMovies = () => {
           <h2 className="admin-add-movie-title py-4">Add Film</h2>
           <Row className="mb-3">
             <Col xs={9}>
-              <Form.Control placeholder="Title" />
+              <Form.Control
+                placeholder="Title"
+                className="admin-add-movie-form"
+              />
             </Col>
             <Col>
               <Form.Group controlId="formThumb">
-                <Form.Label className="admin-add-movie-thumb text-center pt-2">
-                  Attach Thumbnail
+                <Form.Label className="admin-add-movie-thumb text-start pt-1">
+                  <p className="ms-3">Attach Thumbnail</p>
                 </Form.Label>
                 <Form.Control
                   placeholder="Attach Thumbnail"
@@ -30,11 +33,14 @@ const AdminAddMovies = () => {
           </Row>
 
           <Form.Group className="mb-3" controlId="formGridYear">
-            <Form.Control placeholder="Year" />
+            <Form.Control placeholder="Year" className="admin-add-movie-form" />
           </Form.Group>
 
           <Form.Group className="mb-3" controlId="formGridCategory">
-            <Form.Select defaultValue="Category...">
+            <Form.Select
+              defaultValue="Category..."
+              className="admin-add-movie-form"
+            >
               <option>Choose...</option>
               <option>Action</option>
               <option>Comedy</option>
@@ -42,12 +48,19 @@ const AdminAddMovies = () => {
           </Form.Group>
 
           <Form.Group className="mb-5" controlId="formGridDesc">
-            <Form.Control as="textarea" placeholder="Description" />
+            <Form.Control
+              as="textarea"
+              placeholder="Description"
+              className="admin-add-movie-form"
+            />
           </Form.Group>
 
           <Row className="mb-3">
             <Col xs={9}>
-              <Form.Control placeholder="Title Episode" />
+              <Form.Control
+                placeholder="Title Episode"
+                className="admin-add-movie-form"
+              />
             </Col>
             <Col>
               <div className="d-flex">
@@ -64,7 +77,10 @@ const AdminAddMovies = () => {
           </Row>
 
           <Form.Group className="mb-3" controlId="formGridLinkFilm">
-            <Form.Control placeholder="Link Film" />
+            <Form.Control
+              placeholder="Link Film"
+              className="admin-add-movie-form"
+            />
           </Form.Group>
 
           <Button
