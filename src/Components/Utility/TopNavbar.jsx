@@ -59,7 +59,7 @@ function TopNavbar() {
               className="d-flex justify-content-center"
               style={{ width: "60%" }}
             >
-              <img src={Logo} alt="logo" />
+              <img src={Logo} alt="logo" className="nav-img-center" />
             </Navbar.Brand>
 
             <Button variant="light" className="mx-3" onClick={handleShow}>

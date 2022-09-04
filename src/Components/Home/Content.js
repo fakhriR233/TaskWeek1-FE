@@ -24,7 +24,7 @@ function Content(props) {
             className="mySwiper"
           >
             <SwiperSlide>
-              <Link to="/movies/1" className="card_item">
+              <Link to="/moviesdetails" className="card_item">
                 <img
                   className="img_size"
                   src={require("../../Images/default.png")}
@@ -60,6 +60,7 @@ function Content(props) {
                 <img
                   className="img_size"
                   src={require("../../Images/default.png")}
+                  alt="default-movie.jpg"
                 />
                 <h5 className="mt-3">Judul Film</h5>
                 <p className="fw-lighter">2019</p>
@@ -70,6 +71,7 @@ function Content(props) {
                 <img
                   className="img_size"
                   src={require("../../Images/default.png")}
+                  alt="default-movie.jpg"
                 />
                 <h5 className="mt-3">Judul Film</h5>
                 <p className="fw-lighter">2019</p>
@@ -80,6 +82,7 @@ function Content(props) {
                 <img
                   className="img_size"
                   src={require("../../Images/default.png")}
+                  alt="default-movie.jpg"
                 />
                 <h5 className="mt-3">Judul Film</h5>
                 <p className="fw-lighter">2019</p>
@@ -90,6 +93,7 @@ function Content(props) {
                 <img
                   className="img_size"
                   src={require("../../Images/default.png")}
+                  alt="default-movie.jpg"
                 />
                 <h5 className="mt-3">Judul Film</h5>
                 <p className="fw-lighter">2019</p>
@@ -100,6 +104,7 @@ function Content(props) {
                 <img
                   className="img_size"
                   src={require("../../Images/default.png")}
+                  alt="default-movie.jpg"
                 />
                 <h5 className="mt-3">Judul Film</h5>
                 <p className="fw-lighter">2019</p>

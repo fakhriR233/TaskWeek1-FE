@@ -7,6 +7,7 @@ import Payment from "./Components/Payment/Payment";
 import ListTransactions from "./Components/ListTransactions/ListTransactions";
 import TVShows from "./Components/TVShows/TVShows";
 import Movies from "./Components/Movies/Movies";
+import MoviesDetails from "./Components/Details/MoviesDetails";
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
@@ -18,6 +19,7 @@ function App() {
           <Route path="/" exact element={<HomeScreen />} />
           <Route path="/tvshows" exact element={<TVShows />} />
           <Route path="/movies" exact element={<Movies />} />
+          <Route path="/moviesdetails" exact element={<MoviesDetails />} />
           <Route path="/profile" element={<Profil />} />
           <Route path="/payment" element={<Payment />} />
           <Route path="/listtransactions" element={<ListTransactions />} />
