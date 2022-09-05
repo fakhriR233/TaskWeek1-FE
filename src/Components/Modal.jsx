@@ -4,6 +4,12 @@ import Modal from "react-bootstrap/Modal";
 import Form from "react-bootstrap/Form";
 import { useNavigate } from "react-router-dom";
 
+const dataUser = {
+  email: "",
+  password: "",
+  phone: "",
+};
+
 const ModalRegister = ({
   show,
   setShow,
@@ -11,6 +17,14 @@ const ModalRegister = ({
   isLogin,
   setisLogin,
 }) => {
+  const [data, setData] = useState(dataUser);
+  const handleChange = (e) => {
+    setData((prevState) => ({
+      ...prevState,
+      [e.target.name]: e.target.value,
+    }));
+  };
+
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
   let Navigate = useNavigate();
@@ -25,13 +39,15 @@ const ModalRegister = ({
     handleClose();
     setisLogin(true);
     Navigate("/");
+
+    localStorage.setItem("user", JSON.stringify(data));
   }
 
   return (
     <div className="modal-container w-100">
       <Modal show={show} onHide={handleClose}>
         <Modal.Dialog>
-          <Form onSubmit={handleClose}>
+          <Form onSubmit={handleRegister}>
             <Modal.Header>
               <Modal.Title className="modal-title my-3">Register</Modal.Title>
             </Modal.Header>
@@ -42,6 +58,8 @@ const ModalRegister = ({
                   className="modal-register-group"
                   type="email"
                   placeholder="Email"
+                  name="email"
+                  onChange={handleChange}
                 />
               </Form.Group>
 
@@ -50,6 +68,8 @@ const ModalRegister = ({
                   className="modal-register-group"
                   type="password"
                   placeholder="Password"
+                  name="password"
+                  onChange={handleChange}
                 />
               </Form.Group>
 
@@ -58,6 +78,7 @@ const ModalRegister = ({
                   className="modal-register-group"
                   type="Text"
                   placeholder="Full Name"
+                  name="fullname"
                 />
               </Form.Group>
 
@@ -74,6 +95,8 @@ const ModalRegister = ({
                   className="modal-register-group"
                   type="Text"
                   placeholder="Phone"
+                  name="phone"
+                  onChange={handleChange}
                 />
               </Form.Group>
 
@@ -82,6 +105,7 @@ const ModalRegister = ({
                   className="modal-register-group"
                   type="Text"
                   placeholder="Address"
+                  name="address"
                 />
               </Form.Group>
               <span className="mx-auto align-middle modal-account">
