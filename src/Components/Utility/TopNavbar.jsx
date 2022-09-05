@@ -9,9 +9,12 @@ import ModalRegister from "../Modal";
 import ModalLogin from "../ModalLogin";
 import { Link, useNavigate } from "react-router-dom";
 import Logo from "../../Images/DumbflixLogo.png";
+import User from "../../Images/User-Icon.png";
 
 function TopNavbar() {
   let Navigate = useNavigate();
+  const [isLogin, setisLogin] = useState(false);
+
   const [show, setShow] = useState(false);
   const [showLogin, setShowLogin] = useState(false);
 
@@ -56,23 +59,46 @@ function TopNavbar() {
 
             <Navbar.Brand
               onClick={homeHandler}
-              className="d-flex justify-content-center"
+              className="df-brand"
               style={{ width: "60%" }}
             >
               <img src={Logo} alt="logo" className="nav-img-center" />
             </Navbar.Brand>
-
-            <Button variant="light" className="mx-3" onClick={handleShow}>
-              Register
-            </Button>
-            <Button variant="danger" onClick={handleShowLogin}>
-              Login
-            </Button>
+            {isLogin ? (
+              <img
+                src={User}
+                width="40"
+                height="40"
+                className="rounded-circle mx-5"
+                alt="User Icons"
+              />
+            ) : (
+              <>
+                <Button variant="light" className="mx-3" onClick={handleShow}>
+                  Register
+                </Button>
+                <Button variant="danger" onClick={handleShowLogin}>
+                  Login
+                </Button>
+              </>
+            )}
           </Navbar.Collapse>
         </Container>
       </Navbar>
-      <ModalRegister setShow={setShow} show={show} />
-      <ModalLogin setShowLogin={setShowLogin} showLogin={showLogin} />
+      <ModalRegister
+        setShow={setShow}
+        show={show}
+        setShowLogin={setShowLogin}
+        showLogin={showLogin}
+        setisLogin={setisLogin}
+        isLogin={isLogin}
+      />
+      <ModalLogin
+        setShowLogin={setShowLogin}
+        showLogin={showLogin}
+        setShow={setShow}
+        show={show}
+      />
     </>
   );
 }

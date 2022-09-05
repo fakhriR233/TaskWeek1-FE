@@ -2,10 +2,30 @@ import React, { useState } from "react";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import Form from "react-bootstrap/Form";
+import { useNavigate } from "react-router-dom";
 
-const ModalRegister = ({ show, setShow }) => {
+const ModalRegister = ({
+  show,
+  setShow,
+  setShowLogin,
+  isLogin,
+  setisLogin,
+}) => {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+  let Navigate = useNavigate();
+
+  function handleAccount() {
+    handleClose();
+    setShowLogin(true);
+  }
+
+  function handleRegister(e) {
+    e.preventDefault();
+    handleClose();
+    setisLogin(true);
+    Navigate("/");
+  }
 
   return (
     <div className="modal-container w-100">
@@ -66,7 +86,9 @@ const ModalRegister = ({ show, setShow }) => {
               </Form.Group>
               <span className="mx-auto align-middle modal-account">
                 Already have an account ? Click{" "}
-                <ins className="modal-account-here">Here</ins>
+                <ins className="modal-account-here" onClick={handleAccount}>
+                  Here
+                </ins>
               </span>
             </Modal.Body>
 
@@ -75,6 +97,7 @@ const ModalRegister = ({ show, setShow }) => {
                 className="btn-modal-register w-100 my-3"
                 variant="light"
                 type="submit"
+                onClick={handleRegister}
               >
                 Register
               </Button>
