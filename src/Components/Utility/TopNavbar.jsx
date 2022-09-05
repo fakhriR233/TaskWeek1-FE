@@ -8,12 +8,18 @@ import NavDropdown from "react-bootstrap/NavDropdown";
 import ModalRegister from "../Modal";
 import ModalLogin from "../ModalLogin";
 import { Link, useNavigate } from "react-router-dom";
+
+//images import
+
 import Logo from "../../Images/DumbflixLogo.png";
 import User from "../../Images/User-Icon.png";
+import dropdownUser from "../../Images/Icons/Icon-User2.png";
+import dropdownPayment from "../../Images/Icons/bill-1.png";
+import dropdownLogout from "../../Images/Icons/logout-icon-drowndown.png";
 
 function TopNavbar() {
   let Navigate = useNavigate();
-  const [isLogin, setisLogin] = useState(false);
+  const [isLogin, setisLogin] = useState();
 
   const [show, setShow] = useState(false);
   const [showLogin, setShowLogin] = useState(false);
@@ -28,11 +34,22 @@ function TopNavbar() {
     Navigate("/");
   }
 
-  function tvHandler() {
+  function tvHandler(e) {
+    e.preventDefault();
     Navigate("/tvshows");
   }
   function moviesHandler() {
     Navigate("/movies");
+  }
+
+  function profileHandler(e) {
+    e.preventDefault();
+    Navigate("/profile");
+  }
+
+  function paymentHandler(e) {
+    e.preventDefault();
+    Navigate("/payment");
   }
 
   return (
@@ -65,13 +82,53 @@ function TopNavbar() {
               <img src={Logo} alt="logo" className="nav-img-center" />
             </Navbar.Brand>
             {isLogin ? (
-              <img
-                src={User}
-                width="40"
-                height="40"
-                className="rounded-circle mx-5"
-                alt="User Icons"
-              />
+              <>
+                {" "}
+                <NavDropdown
+                  title={
+                    <>
+                      <img
+                        src={User}
+                        width="40"
+                        height="40"
+                        className="rounded-circle mx-5"
+                        alt="User Icons"
+                      />
+                    </>
+                  }
+                  id="basic-nav-dropdown"
+                  menuVariant="dark"
+                >
+                  <NavDropdown.Item onClick={(e) => profileHandler(e)}>
+                    <img
+                      src={dropdownUser}
+                      width="20"
+                      height="20"
+                      alt="icon user"
+                    />{" "}
+                    <span className="ms-2">Profile </span>
+                  </NavDropdown.Item>
+                  <NavDropdown.Item onClick={paymentHandler}>
+                    <img
+                      src={dropdownPayment}
+                      width="20"
+                      height="20"
+                      alt="icon user"
+                    />{" "}
+                    <span className="ms-2">Pay </span>
+                  </NavDropdown.Item>
+                  <NavDropdown.Divider />
+                  <NavDropdown.Item href="/">
+                    <img
+                      src={dropdownLogout}
+                      width="20"
+                      height="20"
+                      alt="icon user"
+                    />{" "}
+                    <span className="ms-2">Logout </span>
+                  </NavDropdown.Item>
+                </NavDropdown>
+              </>
             ) : (
               <>
                 <Button variant="light" className="mx-3" onClick={handleShow}>

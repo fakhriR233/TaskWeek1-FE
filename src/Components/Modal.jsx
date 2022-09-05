@@ -39,7 +39,6 @@ const ModalRegister = ({
     handleClose();
     setisLogin(true);
     Navigate("/");
-
     localStorage.setItem("user", JSON.stringify(data));
   }
 

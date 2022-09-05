@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 // import { useEffect } from "react";
 
 function Banner(props) {
@@ -25,9 +26,11 @@ function Banner(props) {
               {props.data[0].type}
             </button>
           </div>
-          <button className="btn btn-danger btn-md mt-3 banner_button_play">
-            Play Now
-          </button>
+          <Link to="/moviesdetails">
+            <button className="btn btn-danger btn-md mt-3 banner_button_play">
+              WATCH NOW !
+            </button>
+          </Link>
         </div>
       </div>
       <div className="banner-fadeBottom"></div>

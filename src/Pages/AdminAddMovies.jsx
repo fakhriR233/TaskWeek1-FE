@@ -3,11 +3,19 @@ import Button from "react-bootstrap/Button";
 import Col from "react-bootstrap/Col";
 import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";
+import { useNavigate } from "react-router-dom";
+import TopNavbarAdmin from "../Components/Utility/TopNavAdmin";
 import Thumbnail from "../Images/Icons/Attachment.png";
 
 const AdminAddMovies = () => {
+  let Navigate = useNavigate();
+
+  function addButtonHandler() {
+    Navigate("/addlistpage");
+  }
   return (
     <div>
+      <TopNavbarAdmin />
       <div className="admin-add-movie-body">
         <Form className="w-75 mx-auto">
           <h2 className="admin-add-movie-title py-4">Add Film</h2>
@@ -94,6 +102,7 @@ const AdminAddMovies = () => {
             variant="danger"
             type="submit"
             className="admin-add-movie-button"
+            onClick={addButtonHandler}
           >
             Submit
           </Button>

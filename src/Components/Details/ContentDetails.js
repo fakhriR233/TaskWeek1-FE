@@ -33,7 +33,7 @@ function ContentDetails() {
           <h2>The Witcher Season 1</h2>
           <div>
             <span className="me-3 fw-lighter">2019</span>
-            <button className="btn btn-outline-light btn-sm">Action</button>
+            <button className="btn btn-outline-light btn-sm">TV Series</button>
           </div>
           <p className="detail_desc">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vel
