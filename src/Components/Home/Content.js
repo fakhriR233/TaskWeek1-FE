@@ -4,8 +4,13 @@ import "swiper/css/pagination";
 import { Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
+import data from "../data/datamovies.json";
 
 function Content(props) {
+  useEffect(() => {
+    // console.log(data);
+  }, []);
   return (
     <div className="container">
       <div className="content_row">
@@ -23,93 +28,22 @@ function Content(props) {
             modules={[Pagination]}
             className="mySwiper"
           >
-            <SwiperSlide>
-              <Link to="/moviesdetails" className="card_item">
-                <img
-                  className="img_size"
-                  src={require("../../Images/default.png")}
-                  alt="img_size"
-                />
-                <h5 className="mt-3">Judul Film</h5>
-                <p className="fw-lighter">2019</p>
-              </Link>
-            </SwiperSlide>
-            <SwiperSlide>
-              <a href="#" className="card_item">
-                <img
-                  className="img_size"
-                  src={require("../../Images/default.png")}
-                  alt="giblog"
-                />
-                <h5 className="mt-3">Judul Film</h5>
-                <p className="fw-lighter">2019</p>
-              </a>
-            </SwiperSlide>
-            <SwiperSlide>
-              <a href="#" className="card_item">
-                <img
-                  className="img_size"
-                  src={require("../../Images/default.png")}
-                />
-                <h5 className="mt-3">Judul Film</h5>
-                <p className="fw-lighter">2019</p>
-              </a>
-            </SwiperSlide>
-            <SwiperSlide>
-              <a href="#" className="card_item">
-                <img
-                  className="img_size"
-                  src={require("../../Images/default.png")}
-                  alt="default-movie.jpg"
-                />
-                <h5 className="mt-3">Judul Film</h5>
-                <p className="fw-lighter">2019</p>
-              </a>
-            </SwiperSlide>
-            <SwiperSlide>
-              <a href="#" className="card_item">
-                <img
-                  className="img_size"
-                  src={require("../../Images/default.png")}
-                  alt="default-movie.jpg"
-                />
-                <h5 className="mt-3">Judul Film</h5>
-                <p className="fw-lighter">2019</p>
-              </a>
-            </SwiperSlide>
-            <SwiperSlide>
-              <a href="#" className="card_item">
-                <img
-                  className="img_size"
-                  src={require("../../Images/default.png")}
-                  alt="default-movie.jpg"
-                />
-                <h5 className="mt-3">Judul Film</h5>
-                <p className="fw-lighter">2019</p>
-              </a>
-            </SwiperSlide>
-            <SwiperSlide>
-              <a href="#" className="card_item">
-                <img
-                  className="img_size"
-                  src={require("../../Images/default.png")}
-                  alt="default-movie.jpg"
-                />
-                <h5 className="mt-3">Judul Film</h5>
-                <p className="fw-lighter">2019</p>
-              </a>
-            </SwiperSlide>
-            <SwiperSlide>
-              <a href="#" className="card_item">
-                <img
-                  className="img_size"
-                  src={require("../../Images/default.png")}
-                  alt="default-movie.jpg"
-                />
-                <h5 className="mt-3">Judul Film</h5>
-                <p className="fw-lighter">2019</p>
-              </a>
-            </SwiperSlide>
+            {data?.map((item, id) => {
+              return (
+                <SwiperSlide>
+                  <Link to="/movies/1" className="card_item">
+                    <img
+                      className="img_size"
+                      // src={require("../../Images/default.png")}
+                      src={item.image}
+                      alt="img_size"
+                    />
+                    <h5 className="mt-3">{item.title}</h5>
+                    <p className="fw-lighter">{item.year}</p>
+                  </Link>
+                </SwiperSlide>
+              );
+            })}
           </Swiper>
         </div>
       </div>
