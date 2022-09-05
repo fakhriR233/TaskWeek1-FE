@@ -261,8 +261,16 @@
 
 .img_size {
   object-fit: contain;
-  max-height: 180px;
+  max-height: 190px;
   margin-right: 30px;
+  /* width: 100%; */
+}
+
+.img_size_tv_home {
+  object-fit: cover;
+  /* width: 100px; */
+  height: 190px;
+  width: 130px;
 }
 
 .card_item {
