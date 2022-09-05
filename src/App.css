@@ -92,6 +92,10 @@
   cursor: pointer;
 }
 
+.dropdown-toggle::after {
+  display: none !important;
+}
+
 .df-brand {
   text-align: center;
 }

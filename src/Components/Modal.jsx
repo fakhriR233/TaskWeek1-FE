@@ -24,7 +24,6 @@ const ModalRegister = ({
     e.preventDefault();
     handleClose();
     setisLogin(true);
-    Navigate("/");
   }
 
   return (
