@@ -6,7 +6,7 @@ import Form from "react-bootstrap/Form";
 const ModalLogin = ({ showLogin, setShowLogin }) => {
   // console.log(showLogin);
   const handleCloseLogin = () => setShowLogin(false);
-  const handleShowLogin = () => setShowLogin(true);
+  // const handleShowLogin = () => setShowLogin(true);
 
   return (
     <div className="modal-container w-100">

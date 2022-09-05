@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 import { useEffect } from "react";
 import data from "../data/datatvshows.json";
 
-function Content2(props) {
+function ContentTV(props) {
   useEffect(() => {
     // console.log(data);
   }, []);
@@ -51,4 +51,4 @@ function Content2(props) {
   );
 }
 
-export default Content2;
+export default ContentTV;

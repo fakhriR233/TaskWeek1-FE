@@ -66,7 +66,13 @@ const ModalRegister = ({ show, setShow }) => {
               </Form.Group>
               <span className="mx-auto align-middle modal-account">
                 Already have an account ? Click{" "}
-                <ins className="modal-account-here">Here</ins>
+                <ins
+                  className="modal-account-here"
+                  onClick={handleClose}
+                  show={show}
+                >
+                  Here
+                </ins>
               </span>
             </Modal.Body>
 

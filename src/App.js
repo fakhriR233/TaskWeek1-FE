@@ -8,8 +8,10 @@ import ListTransactions from "./Components/ListTransactions/ListTransactions";
 import TVShows from "./Components/TVShows/TVShows";
 import Movies from "./Components/Movies/Movies";
 import MoviesDetails from "./Components/Details/MoviesDetails";
-
+import AdminTransaction from "./Pages/AdminTransaction";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import AddListPage from "./Components/AddListPage/AddListPage";
+import AddEpisode from "./Components/AddEpisode/AddEpisode";
 
 function App() {
   return (
@@ -24,6 +26,9 @@ function App() {
           <Route path="/payment" element={<Payment />} />
           <Route path="/listtransactions" element={<ListTransactions />} />
           <Route path="/addmovies" element={<AdminAddMovies />} />
+          <Route path="/admintransaction" element={<AdminTransaction />} />
+          <Route path="/addlistpage" element={<AddListPage />} />
+          <Route path="/addepisode" element={<AddEpisode />} />
         </Routes>
       </BrowserRouter>
     </>
