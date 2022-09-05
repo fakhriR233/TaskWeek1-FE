@@ -1,14 +1,14 @@
 import React from "react";
 import Table from "react-bootstrap/Table";
 import { Row, Col, Container } from "react-bootstrap";
-import TopNavbar from "../Utility/TopNavbar";
+import TopNavAdmin from "../Utility/TopNavAdmin";
 import { ButtonAction } from "./ButtonAction";
 
 function ListTransactions() {
   return (
     <Container fluid style={{ backgroundColor: "#2f2f2f", height: "100vh" }}>
       <Row>
-        <TopNavbar />
+        <TopNavAdmin />
       </Row>
 
       <Row className="mt-5">

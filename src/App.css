@@ -92,6 +92,10 @@
   cursor: pointer;
 }
 
+.df-brand {
+  text-align: center;
+}
+
 .top-navbar {
   font-family: sans-serif;
 }
