@@ -1,18 +1,31 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 // import { useEffect } from "react";
 
 function Banner(props) {
+  const [currentBG, setCurrentBG] = useState(null);
+  const [currentTitle, setCurrentTitle] = useState(null);
+
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      let x = Math.floor(Math.random() * props.data.length);
+      setCurrentBG(props.data[x].image);
+      setCurrentTitle(props.data[x].title);
+    }, 5000);
+
+    return () => clearInterval(intervalId);
+  }, []);
+
   return (
     <header
       className="banner"
       style={{
-        backgroundImage: `url(${props.data[0].image})`,
+        backgroundImage: `url(${currentBG})`,
       }}
     >
       <div className="container">
         <div className="banner_content">
-          <h1 className="banner_title">{props.data[0].title}</h1>
+          <h1 className="banner_title">{currentTitle}</h1>
           <p className="banner_desc">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vel
             faucibus orci. Sed at sapien ac nulla mattis luctus id et justo.
