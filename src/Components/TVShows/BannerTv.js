@@ -29,7 +29,7 @@ function BannerTv(props) {
             </button>
           </div>
           <button className="btn btn-danger btn-md mt-3 banner_button_play">
-            Play Now
+            WATCH NOW !
           </button>
         </div>
       </div>

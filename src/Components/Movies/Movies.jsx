@@ -1,8 +1,9 @@
 import React from "react";
 import TopNavbar from "../Utility/TopNavbar";
-import data from "../data/datatvshows.json";
+import data from "../data/datamovies.json";
 import BannerMovies from "./BannerMovies";
-import ContentTV from "../Home/ContentTV";
+// import ContentTV from "../Home/ContentTV";
+import Content from "../Home/Content";
 
 function Movies() {
   console.log(data);
@@ -10,7 +11,7 @@ function Movies() {
     <div className="app">
       <TopNavbar />
       <BannerMovies data={data} />
-      <ContentTV category="TV Series" data={data} />
+      <Content category="Movies" data={data} />
     </div>
   );
 }

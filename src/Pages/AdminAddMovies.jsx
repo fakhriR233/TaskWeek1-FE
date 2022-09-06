@@ -14,9 +14,9 @@ const AdminAddMovies = () => {
     Navigate("/addlistpage");
   }
   return (
-    <div>
+    <div className="admin-add-movie-body">
       <TopNavbarAdmin />
-      <div className="admin-add-movie-body">
+      <div className="">
         <Form className="w-75 mx-auto">
           <h2 className="admin-add-movie-title py-4">Add Film</h2>
           <Row className="mb-3">

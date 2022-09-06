@@ -1,8 +1,9 @@
 import React, { Component } from "react";
-import Content from "../Home/Content";
+// import Content from "../Home/Content";
 import TopNavbar from "../Utility/TopNavbar";
 import BannerTv from "./BannerTv";
-import data from "../data/datamovies.json";
+import data from "../data/datatvshows.json";
+import ContentTV from "../Home/ContentTV";
 
 export default class TVShows extends Component {
   render() {
@@ -10,7 +11,7 @@ export default class TVShows extends Component {
       <div className="app">
         <TopNavbar />
         <BannerTv data={data} />
-        <Content category="TV Series" data={data} />
+        <ContentTV category="TV Series" data={data} />
       </div>
     );
   }

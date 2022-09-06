@@ -1,16 +1,19 @@
 import React from "react";
-import TopNavbar from "../Utility/TopNavbar";
+// import TopNavbar from "../Utility/TopNavbar";
 import AddListButton from "./AddListButton";
-import Content from "../Home/Content";
-import ContentTV from "../Home/ContentTV";
+// import Content from "../Home/Content";
+// import ContentTV from "../Home/ContentTV";
+import ContentMoviesAdmin from "../AdminHome/ContentMovies";
+import ContentTVAdmin from "../AdminHome/ContentTVAdmin";
+import TopNavbarAdmin from "../Utility/TopNavAdmin";
 
 function AddListPage() {
   return (
     <div className="app">
-      <TopNavbar />
+      <TopNavbarAdmin />
       <AddListButton />
-      <ContentTV category="TV Series" />
-      <Content category="Movies" />
+      <ContentTVAdmin category="TV Series" />
+      <ContentMoviesAdmin category="Movies" />
     </div>
   );
 }
