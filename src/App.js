@@ -12,6 +12,7 @@ import AdminTransaction from "./Pages/AdminTransaction";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import AddListPage from "./Components/AddListPage/AddListPage";
 import AddEpisode from "./Components/AddEpisode/AddEpisode";
+import AdminDetails from "./Components/Details/MoviesDetails";
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
           <Route path="/admintransaction" element={<AdminTransaction />} />
           <Route path="/addlistpage" element={<AddListPage />} />
           <Route path="/addepisode" element={<AddEpisode />} />
+          <Route path="/admindetail" element={<AdminDetails />} />
         </Routes>
       </BrowserRouter>
     </>
