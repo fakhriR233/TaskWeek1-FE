@@ -3,6 +3,7 @@ import Table from "react-bootstrap/Table";
 import { Row, Col, Container } from "react-bootstrap";
 import TopNavAdmin from "../Utility/TopNavAdmin";
 import { ButtonAction } from "./ButtonAction";
+import data from "../data/transaction.json";
 
 function ListTransactions() {
   return (
@@ -28,42 +29,25 @@ function ListTransactions() {
                 <th>Actions</th>
               </tr>
             </thead>
+
             <tbody>
-              <tr>
-                <td>1</td>
-                <td>Ujang</td>
-                <td>bca.jpg</td>
-                <td>26/Hari</td>
-                <td className="text-success">Active</td>
-                <td className="text-success fw-bold">Approve</td>
-                <td>
-                  <ButtonAction />
-                </td>
-              </tr>
-              <tr>
-                <td>2</td>
-                <td>Ujang</td>
-                <td>bca.jpg</td>
-                <td>26/Hari</td>
-                <td className="text-success">Active</td>
-                <td className="text-danger fw-bold">Cancel</td>
-                {/* <td><ButtonAction/></td> */}
-                <td>
-                  <ButtonAction />
-                </td>
-              </tr>
-              <tr>
-                <td>3</td>
-                <td>Ujang</td>
-                <td>bca.jpg</td>
-                <td>26/Hari</td>
-                <td className="text-danger">Not Active</td>
-                <td className="text-warning fw-bold">Pending</td>
-                {/* <td><ButtonAction/></td> */}
-                <td>
-                  <ButtonAction />
-                </td>
-              </tr>
+              {data?.map((item, id) => {
+                return (
+                  <tr>
+                    <td>{item.id}</td>
+                    <td>{item.name}</td>
+                    <td>{item.proof}</td>
+                    <td>{item.hari}/Hari</td>
+                    <td className="text-success">{item.memberstatus}</td>
+                    <td className="text-success fw-bold">
+                      {item.transactionstatus}
+                    </td>
+                    <td>
+                      <ButtonAction />
+                    </td>
+                  </tr>
+                );
+              })}
             </tbody>
           </Table>
         </Col>
