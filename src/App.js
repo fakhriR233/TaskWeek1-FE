@@ -14,6 +14,7 @@ import AddListPage from "./Components/AddListPage/AddListPage";
 import AddEpisode from "./Components/AddEpisode/AddEpisode";
 import AdminMovieDetails from "./Components/DetailsAdmin/AdminMovieDetails";
 import AdminTVDetails from "./Components/DetailsAdmin/AdminTVDetails";
+import Coba from "./coba/Coba";
 
 function App() {
   return (
@@ -30,9 +31,9 @@ function App() {
           <Route path="/addmovies" element={<AdminAddMovies />} />
           {/* <Route path="/admintransaction" element={<AdminTransaction />} /> */}
           <Route path="/addlistpage" element={<AddListPage />} />
-          <Route path="/addepisode" element={<AddEpisode />} />
           <Route path="/adminmoviedetails" element={<AdminMovieDetails />} />
           <Route path="/admintvdetails" element={<AdminTVDetails />} />
+          <Route path="/coba" element={<Coba />} />
         </Routes>
       </BrowserRouter>
     </>
